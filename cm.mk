@@ -91,7 +91,7 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/s3c-usbgadget/gadget/l
 
 # Graphics
 BOARD_EGL_CFG := device/samsung/p6800/configs/egl.cfg
-BOARD_EGL_NEEDS_LEGACY_FB := true
+BOARD_EGL_NEEDS_LEGACY_FB := false
 USE_OPENGL_RENDERER := true
 ENABLE_WEBGL := true
 
