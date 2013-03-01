@@ -32,23 +32,7 @@ PRODUCT_RELEASE_NAME := GT-P6800
 # Set product name and build fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=GT-P6800 BUILD_FINGERPRINT="samsung/GT-P6800/GT-P6800:4.0.4/IMM76D/XXLQ1:user/release-keys" PRIVATE_BUILD_DESC="GT-P6800-user 4.0.4 IMM76D XXLQ1 release-keys"
 
-# BoardCommon.mk
-#
-# Copyright (C) 2012 The CyanogenMod Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
-
+# Environmental configuration
 TARGET_ARCH := arm
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
@@ -82,7 +66,7 @@ TARGET_PROVIDES_INIT := true
 TARGET_PROVIDES_INIT_TARGET_RC := true
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/samsung/smdk4210
+TARGET_KERNEL_SOURCE := kernel/samsung/p6800
 TARGET_KERNEL_MODULES := CLEAN_MODULES
 BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_PAGESIZE := 4096
@@ -121,7 +105,6 @@ BOARD_USE_SYSFS_VSYNC_NOTIFICATION := true
 BOARD_USES_FIMGAPI := true
 
 # TVOut
-#BOARD_USE_SECTVOUT := true
 BOARD_USES_SKTEXTBOX := true
 
 # OMX
@@ -146,7 +129,7 @@ COMMON_GLOBAL_CFLAGS += -DSAMSUNG_CAMERA_HARDWARE
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_CSR := true
-TARGET_CUSTOM_BLUEDROID := ../../../device/samsung/p6800/bluetooth.c
+TARGET_CUSTOM_BLUEDROID := device/samsung/p6800/bluetooth.c
 
 # Wifi
 BOARD_WLAN_DEVICE                := ath6kl
@@ -170,6 +153,7 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
+
 # Many shipped smdk4210 devices have defective eMMC chips (VYL00M fwrev 0x19)
 # Prevent usage of ERASE commands in recovery on these boards.
 # This is redundant for our recovery since the kernel has MMC_CAP_ERASE
@@ -180,5 +164,5 @@ BOARD_SUPPRESS_EMMC_WIPE := true
 # Releasetools
 # TODO: use standard BOOTIMG_MK
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/p6800/bootimg.mk
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/samsung/p6800/releasetools/ota_from_target_files
-TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/samsung/p6800/releasetools/img_from_target_files
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/samsung/p6800/releasetools/ota_from_target_files
+TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := device/samsung/p6800/releasetools/img_from_target_files
