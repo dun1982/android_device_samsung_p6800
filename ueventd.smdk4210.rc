@@ -1,0 +1,50 @@
+/dev/mali                 0666   system     system
+/dev/ump                  0666   system     system
+/dev/ion                  0666   system     system
+/dev/exynos-mem           0660   system     graphics
+/dev/video0               0660   system     camera
+/dev/video1               0660   system     camera
+/dev/video2               0660   system     camera
+/dev/video3               0660   system     camera
+/dev/s5p-jpeg             0660   system     camera
+/dev/s3c-mem              0666   system     system
+/dev/s3c-mfc              0666   system     system
+
+/dev/i2c-7                0666   system     system
+/dev/pmem                 0666   system     graphics
+/dev/pmem_gpu1            0660   system     graphics
+/dev/HPD                  0666   system     system
+/dev/fimg2d               0666   system     graphics
+/dev/srp                  0666   system     audio
+
+# bluetooth
+/dev/ttySAC0              0600   bluetooth  bluetooth
+
+# gps
+/dev/ttySAC1              0660   root       system
+
+# keyboard dock
+/dev/ttySAC2              0660   root       system
+
+# datarouter
+/dev/dun                  0660   system     radio
+/dev/ttyGS0               0660   system     radio
+/dev/block/mmcblk0p8      0660   system     radio
+
+# sensors
+/dev/akm8975              0660   system     system
+/dev/mpu                  0660   system     system
+/dev/mpuirq               0660   system     system
+/dev/timerirq             0660   system     system
+
+# TV Out
+/dev/video14              0660   system     graphics
+/dev/video21              0660   system     graphics
+
+# i815 modem
+/dev/block/mmcblk0p4      0660   system     radio
+/dev/cdma_*               0660   system     radio
+/dev/link_pm              0660   system     radio
+/dev/lte_*                0660   system     radio
+/dev/modem_br             0660   system     radio
+/dev/ttyGS1               0660   system     radio

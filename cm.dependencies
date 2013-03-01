@@ -1,0 +1,20 @@
+[
+    {
+        "repository": "android_hardware_atheros_wlan",
+        "target_path": "hardware/atheros/wlan"
+    },
+    {
+        "repository": "android_hardware_samsung",
+        "target_path": "hardware/samsung"
+    },
+    {
+    {
+        "repository": "android_kernel_samsung_p6800",
+        "target_path": "kernel/samsung/p6800",
+        "branch": "cm-10.1"
+    }
+    {
+        "repository": "android_packages_apps_SamsungServiceMode",
+        "target_path": "packages/apps/SamsungServiceMode"
+    }
+]
