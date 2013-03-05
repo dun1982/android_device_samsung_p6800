@@ -71,8 +71,7 @@ TARGET_KERNEL_MODULES := CLEAN_MODULES
 BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_CMDLINE :=
-CLEAN_MODULES:
-	arm-eabi-strip --strip-debug `find $(KERNEL_MODULES_OUT) -name *.ko`
+CLEAN_MODULES := arm-eabi-strip --strip-debug `find $(KERNEL_MODULES_OUT) -name *.ko`
 
 # Filesystem
 BOARD_NAND_PAGE_SIZE := 4096
@@ -91,7 +90,7 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/s3c-usbgadget/gadget/l
 
 # Graphics
 BOARD_EGL_CFG := device/samsung/p6800/configs/egl.cfg
-BOARD_EGL_NEEDS_LEGACY_FB := false
+BOARD_EGL_NEEDS_LEGACY_FB := true
 USE_OPENGL_RENDERER := true
 ENABLE_WEBGL := true
 
