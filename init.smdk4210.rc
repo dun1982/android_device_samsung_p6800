@@ -29,7 +29,9 @@ on fs
 
     mkdir /efs                0771 radio  system
 
-    mount_all /fstab.smdk4210
+    mount ext4 /dev/block/mmcblk0p10 /data
+    mount ext4 /dev/block/mmcblk0p7  /cache
+    mount ext4 /dev/block/mmcblk0p9  /system 
 
     setprop ro.crypto.fuse_sdcard true
 
