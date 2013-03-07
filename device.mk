@@ -53,7 +53,6 @@ PRODUCT_PACKAGES += \
     Torch \
     macloader \
     bccmd \
-    Smdk4210TabSettings
 
 # HAL
 PRODUCT_PACKAGES += \
