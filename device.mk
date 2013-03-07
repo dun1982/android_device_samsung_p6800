@@ -16,7 +16,6 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
-$(call inherit-product-if-exists, vendor/samsung/smdk4210-tab/vendor.mk)
 
 # include a bunch of resources
 PRODUCT_AAPT_CONFIG := normal large xlarge mdpi tvdpi hdpi
