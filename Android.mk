@@ -1,3 +1,3 @@
-ifeq ($(TARGET_FAMILY),smdk4210-tab)
-include $(all-subdir-makefiles)
-endif
+LOCAL_PATH := $(call my-dir)
+include $(CLEAR_VARS)
+include $(BUILD_SHARED_LIBRARY)

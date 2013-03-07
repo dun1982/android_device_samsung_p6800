@@ -35,10 +35,10 @@ TARGET_ARCH_VARIANT_FPU := neon
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
 TARGET_BOARD_PLATFORM := exynos4
-TARGET_FAMILY := smdk4210-tab
+TARGET_FAMILY := p6800
 TARGET_SOC := exynos4210
 TARGET_BOOTLOADER_BOARD_NAME := smdk4210
-TARGET_BOARD_INFO_FILE := device/samsung/smdk4210-tab/board-info.txt
+TARGET_BOARD_INFO_FILE := device/samsung/p6800/board-info.txt
 
 EXYNOS4_ENHANCEMENTS := true
 EXYNOS4210_ENHANCEMENTS := true
@@ -50,8 +50,8 @@ COMMON_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
-DEVICE_PACKAGE_OVERLAYS += device/samsung/smdk4210-tab/overlay
-TARGET_SPECIFIC_HEADER_PATH += device/samsung/smdk4210-tab/overlay/include
+DEVICE_PACKAGE_OVERLAYS += device/samsung/p6800/overlay
+TARGET_SPECIFIC_HEADER_PATH += device/samsung/p6800/overlay/include
 
 # Init
 TARGET_PROVIDES_INIT := true
@@ -82,7 +82,7 @@ BOARD_VOLD_DISC_HAS_MULTIPLE_MAJORS := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/s3c-usbgadget/gadget/lun%d/file"
 
 # Graphics
-BOARD_EGL_CFG := device/samsung/smdk4210-tab/configs/egl.cfg
+BOARD_EGL_CFG := device/samsung/p6800/configs/egl.cfg
 BOARD_EGL_NEEDS_LEGACY_FB := true
 USE_OPENGL_RENDERER := true
 ENABLE_WEBGL := true
@@ -122,7 +122,7 @@ COMMON_GLOBAL_CFLAGS += -DSAMSUNG_CAMERA_HARDWARE
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_CSR := true
-TARGET_CUSTOM_BLUEDROID := ../../../device/samsung/smdk4210-tab/bluetooth.c
+TARGET_CUSTOM_BLUEDROID := ../../../device/samsung/p6800/bluetooth.c
 
 # Wifi
 BOARD_WLAN_DEVICE                := ath6kl
@@ -139,7 +139,7 @@ BOARD_CHARGING_MODE_BOOTING_LPM := "/sys/class/power_supply/battery/batt_lp_char
 BOARD_BATTERY_DEVICE_NAME := "battery"
 
 # Recovery
-TARGET_RECOVERY_INITRC := device/samsung/smdk4210-tab/recovery.rc
+TARGET_RECOVERY_INITRC := device/samsung/p6800/recovery.rc
 BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
@@ -155,6 +155,6 @@ BOARD_SUPPRESS_EMMC_WIPE := true
 
 # Releasetools
 # TODO: use standard BOOTIMG_MK
-BOARD_CUSTOM_BOOTIMG_MK := device/samsung/smdk4210-tab/bootimg.mk
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/samsung/smdk4210-tab/releasetools/ota_from_target_files
-TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/samsung/smdk4210-tab/releasetools/img_from_target_files
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/p6800/bootimg.mk
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/samsung/p6800/releasetools/ota_from_target_files
+TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/samsung/p6800/releasetools/img_from_target_files
