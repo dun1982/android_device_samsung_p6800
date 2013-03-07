@@ -71,7 +71,8 @@ TARGET_KERNEL_MODULES := CLEAN_MODULES
 BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_CMDLINE :=
-CLEAN_MODULES := arm-eabi-strip --strip-debug `find $(KERNEL_MODULES_OUT) -name *.ko`
+CLEAN_MODULES:
+	arm-eabi-strip --strip-debug `find $(KERNEL_MODULES_OUT) -name *.ko`
 
 # Filesystem
 BOARD_NAND_PAGE_SIZE := 4096

@@ -16,7 +16,7 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
-$(call inherit-product-if-exists, vendor/samsung/p6800/vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/smdk4210-tab/vendor.mk)
 
 # include a bunch of resources
 PRODUCT_AAPT_CONFIG := normal large xlarge mdpi tvdpi hdpi
@@ -27,6 +27,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init.smdk4210.rc:root/init.smdk4210.rc \
     $(LOCAL_PATH)/init.smdk4210.usb.rc:root/init.smdk4210.usb.rc \
     $(LOCAL_PATH)/lpm.rc:root/lpm.rc \
+    $(LOCAL_PATH)/fstab.smdk4210:root/fstab.smdk4210 \
     $(LOCAL_PATH)/ueventd.smdk4210.rc:root/ueventd.smdk4210.rc
 
 # Vold and Storage
